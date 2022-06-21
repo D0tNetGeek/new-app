@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   hostUrl: 'http://test-server:4200/app/',
+  apiUrl: 'http://localhost:4300/api',
   username: 'userTest1',
   token: 'xyz123Test',
   port: 8080,
