@@ -1,0 +1,77 @@
+<!-- style="margin-top: 80px" -->
+<div>
+<h1>Employee Details!</h1>
+
+<div class="form-group">
+    <p>Card Number</p>
+    <div>
+        <input type="text" placeholder="0000-0000-0000-0000" [(ngModel)]="cc" size="18" minlength="19" maxlength="19">
+        <img ccLogo [cardNumber]="cc">
+    <p>Your credit card number is: {{cc ? cc : 'Not Entered !!'}}</p>
+    </div>
+</div>
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Emp Code</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Department ID</th>
+    </tr>
+    <tr *ngFor="let employee of employees">
+        <td><a [routerLink]='["/employee-detail/", employee.empId]'>{{ employee.empId | uppercase}}</a></td>
+        <td>{{employee.empName | titlecase}}</td>
+        <td>{{employee.gender | lowercase}}</td>
+        <td>{{employee.dob | date : 'dd/MMM/YY'}}</td>
+        <td>{{employee.salary | currency : 'GBP' : 'symbol'}}</td>
+        <td><a [routerLink]='["/department"]' routerLinkActive="active" >{{employee.deptId | uppercase}}</a></td>
+    </tr>
+</thead>
+</table> 
+
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Emp Code</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Department ID</th>
+    </tr>
+    <tr *ngFor="let employeee of employeees">
+        <td>{{employeee.empId | uppercase}}</td>
+        <td>{{employeee.empName | titlecase}}</td>
+        <td>{{employeee.gender | lowercase}}</td>
+        <td>{{employeee.dob | date : 'dd/MMM/YY'}}</td>
+        <td>{{employeee.salary | currency : 'GBP' : 'symbol'}}</td>
+        <td>{{employeee.deptId | uppercase}}</td>
+    </tr>
+</thead>
+</table> 
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Emp Code</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Department ID</th>
+    </tr>
+    <tr *ngFor="let employeee of employeesApi">
+        <td>{{employeee.empId | uppercase}}</td>
+        <td>{{employeee.empName | titlecase}}</td>
+        <td>{{employeee.gender | lowercase}}</td>
+        <td>{{employeee.dob | date : 'dd/MMM/YY'}}</td>
+        <td>{{employeee.salary | currency : 'GBP' : 'symbol'}}</td>
+        <td>{{employeee.deptId | uppercase}}</td>
+    </tr>
+</thead>
+</table>
+</div>

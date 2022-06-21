@@ -1,0 +1,55 @@
+h1{
+    color:red
+}
+
+/*
+npm install bootstrap 
+
+ng g c employee
+
+ng g s employee/employee
+
+ng g s services/employee
+
+ng g s services/logger
+
+ng g d directives/ccLogo
+
+ng g module login
+
+ng g c login
+
+ng g c nav-bar
+
+ng g s services/employeeApi
+
+ng g s services/department
+
+ng g c department#
+
+ng g c pagenotfound
+
+ng g c employee-detail
+
+ng g s services/authentication
+
+ng serve --configuration=development
+ng serve --configuration=staging 
+ng serve --configuration=test 
+ng serve --configuration=production
+
+ng build --configuration=production --base-href=https://prod.myfirstangularapp.com/
+ng build --configuration=development --base-href=https://dev.myfirstangularapp.com/ 
+ng build --configuration=staging --base-href=https://staging.myfirstangularapp.com/  
+ng build --configuration=test --base-href=https://test.myfirstangularapp.com/
+
+---
+npm install jquery
+npm install popper.js --save
+
+----------------
+
+mongo db
+
+npm start
+*/

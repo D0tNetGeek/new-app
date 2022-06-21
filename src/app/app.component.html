@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"/>
+
+<!-- <H1>Hello World</H1>
+
+<p><a [routerLink]='["/login"]'>Go Back to Login Page</a></p>
+
+<input type="text" [(ngModel)]="name" (input) = "OnUpdateInput($event)">
+My name is : {{name}} <br><br>  --- One way binding---
+Event input update: {{inputData}} <br><br>
+
+--- Property binding---
+<p><button 
+    id="btnTest" 
+    [disabled]="isDisabled"
+    (click) = "onBtnClick()"
+    >{{btnTest}}</button></p>&nbsp; 
+
+    Is {{myBtn}} disabled: {{isDisabled}}
+    <p >{{isBtnClicked}}</p>
+<p
+    style="background-color: black;"
+    class="disabledColor"
+>
+<p 
+    [ngStyle]="{backgroundColor: getStyleColor()}" 
+    [ngClass]="{disableColor: isDisabled}"
+    [ngClass]="isDisabled ? 'disabledColor' : 'enabledColor'" 
+    >
+    Is {{myBtn}} disabled: {{isDisabled ? 'Yes' : 'No'}} 
+</p>
+--- ngStyle is Attribute directive---
+<p>
+    <input 
+    type="button"
+    value="{{myBtn}}"
+    *ngIf="isDisabled else noMessage"
+    >
+
+    <ng-template #noMessage>
+        <p [ngStyle]="{backgroundColor: 'red'}">{{myBtn}} is not there.</p> 
+    </ng-template>
+</p>
+--- Event binding---
+&nbsp; <p *ngIf="isDisabled">{{isBtnClicked}}</p> 
+
+<input type="text" [(ngModel)]="selectDay">
+<div [ngSwitch]="selectDay">
+    <p *ngSwitchCase="1">Today is Sunday</p>
+    <p *ngSwitchCase="2">Today is Monday</p>
+    <p *ngSwitchCase="3">Today is Tuesday</p>
+    <p *ngSwitchCase="4">Today is Wednesday</p>
+    <p *ngSwitchCase="5">Today is Thursday</p>
+    <p *ngSwitchCase="6">Today is Friday</p>
+    <p *ngSwitchCase="7">Today is Saturday</p>
+    <p *ngSwitchDefault>Invalid Day !!!</p>
+</div> -->
+
+<!-- <table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Emp Code</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Salary</th>
+    </tr>
+    <tr *ngFor="let employee of employees">
+        <td>{{employee.empId}}</td>
+        <td>{{employee.empName}}</td>
+        <td>{{employee.gender}}</td>
+        <td>{{employee.dob}}</td>
+        <td>{{employee.salary}}</td>
+    </tr>
+</thead>
+</table> -->
+<!-- <app-employee></app-employee> -->
+
+<app-nav-bar></app-nav-bar>
+
+<div class="container text-center" style="margin-top: 80px">
+    <router-outlet></router-outlet>
+</div>
+<app-footercomponent></app-footercomponent>

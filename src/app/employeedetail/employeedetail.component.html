@@ -1,0 +1,26 @@
+<!-- style="margin-top: 80px" -->
+<div class="container">
+<h1>Employee Details for {{empId}}</h1>
+</div>
+<table class="table" style="margin-top: 50px">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Emp Code</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Department ID</th>
+    </tr>
+    <tr *ngFor="let emp of employee">
+        <td>{{emp.empId | uppercase}}</td>
+        <td>{{emp.empName | titlecase}}</td>
+        <td>{{emp.gender | lowercase}}</td>
+        <td>{{emp.dob | date : 'dd/MMM/YY'}}</td>
+        <td>{{emp.salary | currency : 'GBP' : 'symbol'}}</td>
+        <td>{{emp.deptId | uppercase}}</td>
+    </tr>
+</thead>
+</table> 
+
+<p><a [routerLink]='["/employee"]'>Go to Employees</a></p>

@@ -1,0 +1,40 @@
+<!-- style="margin-top: 80px" -->
+<h1>Form Group Example</h1>
+
+<form [formGroup]="userDetails" (ngSubmit)="onSubmit()">
+    <div class="col-sm form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" class="form-control" formControlName="firstName">
+    
+        <div *ngIf="isValidInput('firstName')" class="alert alert-danger">
+            <div *ngIf="userDetails.controls['firstName'].errors">
+                First Name is Required.
+            </div>
+        </div>
+    
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" class="form-control" formControlName="lastName">
+    
+        <div *ngIf="isValidInput('lastName')" class="alert alert-danger">
+            <div *ngIf="userDetails.controls['lastName'].errors">
+                Last Name is Required.
+            </div>
+        </div>
+    
+        <label for="age">Age</label>
+        <input type="text" id="age"class="form-control" formControlName="age">
+    
+        <div *ngIf="isValidInput('age')" class="alert alert-danger">
+            <div *ngIf="userDetails.controls['age'].errors">
+                Age is Required.
+            </div>
+        </div>
+    </div>
+    
+    <div class="row" style="margin: 10px;">
+        <div class="col-sm">
+            <button class="btn btn-success" type="submit" [disabled]="!userDetails.valid">Preview</button>
+        </div>
+    </div>
+    
+    </form>
